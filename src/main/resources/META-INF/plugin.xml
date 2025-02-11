@@ -5,14 +5,9 @@
     <vendor>jansorg</vendor>
 
     <depends>com.intellij.modules.platform</depends>
-
-    <resource-bundle>messages.MyBundle</resource-bundle>
+    <depends>com.intellij.modules.lang</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.jansorg.demofiletypedetector.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <fileTypeDetector implementation="com.github.jansorg.demofiletypedetector.DemoFileTypeDetector"/>
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.jansorg.demofiletypedetector.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
 </idea-plugin>
